@@ -3,18 +3,18 @@
 #include <avr/io.h>
 #include <util/delay.h>
 
-#define LCD_DATA_DDR	DDRD
-#define LCD_CTRL_DDR	DDRC
+#define LCD_DATA_DDR		DDRD
+#define LCD_CTRL_DDR		DDRC
 
-#define LCD_DATA_PORT	PORTD
-#define LCD_CTRL_PORT	PORTC
+#define LCD_DATA_PORT		PORTD
+#define LCD_CTRL_PORT		PORTC
 
-#define RS				2
-#define E				3
-#define D4				4
-#define D5				5
-#define D6				6
-#define D7				7
+#define RS			2
+#define E			3
+#define D4			4
+#define D5			5
+#define D6			6
+#define D7			7
 
 #define LCD_DATA_TX		LCD_CTRL_PORT |= _BV(RS)
 #define LCD_INST_TX		LCD_CTRL_PORT &= ~_BV(RS)
@@ -22,7 +22,7 @@
 #define LCD_EN			LCD_CTRL_PORT |= _BV(E)
 #define LCD_DIS			LCD_CTRL_PORT &= ~_BV(E)
 
-#define SET_DDRAM_ADDR	0x80
+#define SET_DDRAM_ADDR		0x80
 
 typedef enum
 {
